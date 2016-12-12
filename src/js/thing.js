@@ -30,6 +30,7 @@ var TRUMP_STATES = [
     'Utah',
     'Nebraska',
     'Missouri',
+    'Kentucky',
     'Kansas',
     'West Virginia',
     'Arizona',
