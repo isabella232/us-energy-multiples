@@ -1,0 +1,87 @@
+@import 'maps/base'
+// @import 'maps/usa'
+// @import 'maps/europe'
+// @import 'maps/world'
+
+$coal = alpha($qz-blue-2, 0.8)
+$oil = alpha($qz-blue-4, 0.8)
+$solar = alpha($qz-purp-1, 0.8)
+$wind = alpha($qz-purp-4, 0.8)
+$stripe = alpha($qz-gray-1, 0.8)
+
+ul#legend
+	padding: 15px 0 0 10px
+	margin: 0
+	list-style-type: none
+
+	li
+		display: inline-block
+		margin: 0 18px 0 0
+		padding: 0
+		line-height: 17px
+
+		b
+			display: inline-block
+			width: 17px
+			height: 17px
+			margin-right: 6px
+			float: left
+			border: 1px solid $qz-map-graticule
+			border-radius(8px)
+
+		div
+			whitespace: nowrap
+			fill: $qz-gray-2
+			font-size: 14px
+			font-family: 'AdelleSans-Regular', Helvetica, Arial, sans-serif
+			float: left;
+
+		&.oil b
+			background-color: $oil
+
+		&.coal b
+			background: repeating-linear-gradient(135deg, $coal, $coal 3px, $stripe 3px, $stripe 6px)
+
+		&.solar b
+			background: repeating-linear-gradient(135deg, $solar, $solar 3px, $stripe 3px, $stripe 6px)
+
+		&.wind b
+			background-color: $wind
+
+#graphic
+	h2
+		margin-left: 10px
+
+.paths
+	.states path
+		fill $qz-map-land-fill
+
+	.oil path
+		fill $oil
+
+	.wind path
+		fill $wind
+
+	.outlines path
+		fill none
+		fill-opacity 0
+		stroke $qz-map-land-stroke
+		stroke-width 0.5px
+		stroke-opacity 0.8
+
+	.clip-states path
+		fill $qz-background-gray
+		stroke-width 0.5px
+		stroke $qz-background-gray
+
+.footer
+	clear both
+	font-family $qz-sans
+	color $qz-gray-2
+	font-size 14px
+
+@media screen and (min-width 940px)
+	#graphic
+		.left, .right
+			width 50%
+			float left
