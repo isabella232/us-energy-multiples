@@ -32,7 +32,7 @@ var gdoc_url = "http://"+gdoc_host+"/"+ gdoc_id;
 var content = {};
 
 var qzdataPath = process.env.QZDATA_PATH || "~/qzdata";
-var thingName = "us-energy-resources";
+var thingName = "us-energy-multiples";
 var thingPath = qzdataPath + "/" + "2016/" + thingName;
 
 var isProd = args.build ? true : false;
